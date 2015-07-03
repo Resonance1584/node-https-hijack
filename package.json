@@ -1,0 +1,25 @@
+{
+  "name": "https-hijack",
+  "version": "1.0.0",
+  "description": "Adds console logs to https request",
+  "keywords": [
+    "https",
+    "debug",
+    "debugging",
+    "log",
+    "logging"
+  ],
+  "main": "https-hijack.js",
+  "author": "resonance1584",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Resonance1584/node-https-hijack.git"
+  },
+  "devDependencies": {
+    "standard": "^4.5.2"
+  },
+  "scripts": {
+    "test": "standard https-hijack.js"
+  }
+}
