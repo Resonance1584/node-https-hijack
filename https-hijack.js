@@ -5,11 +5,12 @@
  */
 
 var https = require('https')
+var stringify = require('json-stringify-safe')
 var _httpRequest = https.request
 https.request = function (options, callback) {
   // Concatenate everything in a single string so output is always in order
   var out = ' --- HTTPS Request ---'
-  out += '\n' + JSON.stringify(options, null, 2)
+  out += '\n' + stringify(options, null, 2)
   var request = _httpRequest(options, function (res) {
     var response = ''
     res.on('data', function (d) {
@@ -18,7 +19,7 @@ https.request = function (options, callback) {
     res.on('end', function () {
       out += '\n --- HTTPS Response ---'
       out += '\nstatus: ' + res.statusCode
-      out += '\nheaders: ' + JSON.stringify(res.headers, null, 2)
+      out += '\nheaders: ' + stringify(res.headers, null, 2)
       out += '\nbody: ' + response
       console.log(out)
     })

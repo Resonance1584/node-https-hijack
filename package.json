@@ -21,5 +21,8 @@
   },
   "scripts": {
     "test": "standard https-hijack.js"
+  },
+  "dependencies": {
+    "json-stringify-safe": "^5.0.1"
   }
 }
