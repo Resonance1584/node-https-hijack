@@ -1,6 +1,6 @@
 {
   "name": "https-hijack",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Adds console logs to https request",
   "keywords": [
     "https",
