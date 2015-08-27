@@ -23,7 +23,9 @@ https.request = function (options, callback) {
       out += '\nbody: ' + response
       console.log(out)
     })
-    callback(res)
+    if (typeof callback === 'function') {
+      callback(res)
+    }
   })
   // Hijack request body
   if (options.method === 'POST' || options.method === 'PUT') {
